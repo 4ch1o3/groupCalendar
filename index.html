@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<head>
-    <title>약속 날짜 잡기</title>
-    <meta charset="UTF-8">
-    <link href="main.css" rel="stylesheet" />
-    <script src="main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                selectable: true
-            });
-            calendar.render();
-        });
-    </script>
-</head>
-<body>
-    <div id='calendar'></div>
-</body>
+<html>
+    <head>
+        <title>약속 날짜 잡기</title>
+        <meta charset="UTF-8">
+        <link href="main.css" rel="stylesheet" />
+        <script src="main.js"></script>
+        <script src="index.js"></script>
+        
+    </head>
+    <body>
+        <div id='calendar'></div>
+    </body>
+</html>
