@@ -10,7 +10,7 @@ function buildCal() {
 
     let tbody_Cal = document.querySelector(".Calendar > tbody");
     document.getElementById("calYear").innerText = currentMon.getFullYear();
-    document.getElementById("calMonth").innerText = lpad(currentMon.getMonth() + 1);
+    document.getElementById("calMonth").innerText = padStart(currentMon.getMonth() + 1);
 
     while(tbody_Cal.rows.length > 0) {
         tbody_Cal.deleteRow(tbody_Cal.rows.length-1);
@@ -24,7 +24,7 @@ function buildCal() {
 
     for(let currentDay = firstDate; currentDay <= lastDate; currentDay.setDate(currentDay.getDay())+1) {
         let currentCol = currentRow.insertCell();
-        currentCol.innerText = lpad(currentDay.getDate());
+        currentCol.innerText = padStart(currentDay.getDate());
 
         if (currentDay < today) { // 지난날인 경우
             currentCol.className = "pastDay";
@@ -64,7 +64,7 @@ function prevCalendar() {
         currentMon.getMonth() - 1,
         currentMon.getDate()
   ); // 현재 달을 1 감소
-  buildCalendar(); // 달력 다시 생성
+  bulildCal(); // 달력 다시 생성
 }
 
 function nextCalendar() {
@@ -73,5 +73,5 @@ function nextCalendar() {
         currentMon.getMonth() + 1,
         currentMon.getDate()
   ); // 현재 달을 1 증가
-  buildCalendar(); // 달력 다시 생성
+  bulildCal(); // 달력 다시 생성
 }
